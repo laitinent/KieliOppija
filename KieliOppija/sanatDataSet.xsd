@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="sanatDataSet" targetNamespace="http://tempuri.org/sanatDataSet.xsd" xmlns:mstns="http://tempuri.org/sanatDataSet.xsd" xmlns="http://tempuri.org/sanatDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="sanatConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sanatConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WpfApp3.Properties.Settings.GlobalReference.Default.sanatConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="kontekstiTableAdapter" GeneratorDataComponentClassName="kontekstiTableAdapter" Name="konteksti" UserDataComponentName="kontekstiTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sanatConnectionString (Settings)" DbObjectName="sanat.konteksti" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, konteksti FROM konteksti</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="lauseetTableAdapter" GeneratorDataComponentClassName="lauseetTableAdapter" Name="lauseet" UserDataComponentName="lauseetTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sanatConnectionString (Settings)" DbObjectName="sanat.lauseet" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, lause, päälause FROM lauseet</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ryhmätTableAdapter" GeneratorDataComponentClassName="ryhmätTableAdapter" Name="ryhmät" UserDataComponentName="ryhmätTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sanatConnectionString (Settings)" DbObjectName="sanat.ryhmät" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, kuvaus FROM ryhmät</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sanalistaTableAdapter" GeneratorDataComponentClassName="sanalistaTableAdapter" Name="sanalista" UserDataComponentName="sanalistaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sanatConnectionString (Settings)" DbObjectName="sanat.sanalista" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, sana_alkup, sana_perus, konteksti, järjestys_alusta, järjestys_lopusta, lause_alkup FROM sanalista</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="syntaksitTableAdapter" GeneratorDataComponentClassName="syntaksitTableAdapter" Name="syntaksit" UserDataComponentName="syntaksitTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sanatConnectionString (Settings)" DbObjectName="sanat.syntaksit" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, sanamuoto, aikamuoto, lauseen_osa, kuuluu_ryhmään FROM syntaksit</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="sanatDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="sanatDataSet" msprop:Generator_UserDSName="sanatDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="konteksti" msprop:Generator_TableClassName="kontekstiDataTable" msprop:Generator_TableVarName="tablekonteksti" msprop:Generator_TablePropName="konteksti" msprop:Generator_RowDeletingName="kontekstiRowDeleting" msprop:Generator_RowChangingName="kontekstiRowChanging" msprop:Generator_RowEvHandlerName="kontekstiRowChangeEventHandler" msprop:Generator_RowDeletedName="kontekstiRowDeleted" msprop:Generator_UserTableName="konteksti" msprop:Generator_RowChangedName="kontekstiRowChanged" msprop:Generator_RowEvArgName="kontekstiRowChangeEvent" msprop:Generator_RowClassName="kontekstiRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="lauseet" msprop:Generator_TableClassName="lauseetDataTable" msprop:Generator_TableVarName="tablelauseet" msprop:Generator_TablePropName="lauseet" msprop:Generator_RowDeletingName="lauseetRowDeleting" msprop:Generator_RowChangingName="lauseetRowChanging" msprop:Generator_RowEvHandlerName="lauseetRowChangeEventHandler" msprop:Generator_RowDeletedName="lauseetRowDeleted" msprop:Generator_UserTableName="lauseet" msprop:Generator_RowChangedName="lauseetRowChanged" msprop:Generator_RowEvArgName="lauseetRowChangeEvent" msprop:Generator_RowClassName="lauseetRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ryhmät" msprop:Generator_TableClassName="ryhmätDataTable" msprop:Generator_TableVarName="tableryhmät" msprop:Generator_TablePropName="ryhmät" msprop:Generator_RowDeletingName="ryhmätRowDeleting" msprop:Generator_RowChangingName="ryhmätRowChanging" msprop:Generator_RowEvHandlerName="ryhmätRowChangeEventHandler" msprop:Generator_RowDeletedName="ryhmätRowDeleted" msprop:Generator_UserTableName="ryhmät" msprop:Generator_RowChangedName="ryhmätRowChanged" msprop:Generator_RowEvArgName="ryhmätRowChangeEvent" msprop:Generator_RowClassName="ryhmätRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="sanalista" msprop:Generator_TableClassName="sanalistaDataTable" msprop:Generator_TableVarName="tablesanalista" msprop:Generator_TablePropName="sanalista" msprop:Generator_RowDeletingName="sanalistaRowDeleting" msprop:Generator_RowChangingName="sanalistaRowChanging" msprop:Generator_RowEvHandlerName="sanalistaRowChangeEventHandler" msprop:Generator_RowDeletedName="sanalistaRowDeleted" msprop:Generator_UserTableName="sanalista" msprop:Generator_RowChangedName="sanalistaRowChanged" msprop:Generator_RowEvArgName="sanalistaRowChangeEvent" msprop:Generator_RowClassName="sanalistaRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="syntaksit" msprop:Generator_TableClassName="syntaksitDataTable" msprop:Generator_TableVarName="tablesyntaksit" msprop:Generator_TablePropName="syntaksit" msprop:Generator_RowDeletingName="syntaksitRowDeleting" msprop:Generator_RowChangingName="syntaksitRowChanging" msprop:Generator_RowEvHandlerName="syntaksitRowChangeEventHandler" msprop:Generator_RowDeletedName="syntaksitRowDeleted" msprop:Generator_UserTableName="syntaksit" msprop:Generator_RowChangedName="syntaksitRowChanged" msprop:Generator_RowEvArgName="syntaksitRowChangeEvent" msprop:Generator_RowClassName="syntaksitRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
